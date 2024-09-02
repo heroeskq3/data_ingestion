@@ -9,20 +9,20 @@ This repository contains a data ingestion pipeline that simulates real-time data
 - `data_queries.py`: Script for querying the processed data from SQL Server.
 
 ## Setup
-1. ** Install Dependencies: **
+1. **Install Dependencies:**
    ```bash
    pip install pandas pyodbc
    ```
 
-2. ** Configure the Database Connection: **
+2. **Configure the Database Connection:**
 - Open data_pipeline.py and data_queries.py, and update the connection strings with your SQL Server credentials.
 
-3. ** Run the Data Pipeline Script: **
+3. **Run the Data Pipeline Script:**
 ```bash
 python data_pipeline.py
 ```
 
-4. ** Run the Queries Script: **
+4. **Run the Queries Script:**
 ```bash
 python data_queries.py
 ```
@@ -33,7 +33,7 @@ To handle a larger volume of data and improve performance, consider the followin
 ```
 ### Database Optimization
 
-- ** Indexes: **
+- **Indexes:**
   - Create an index on the `total_value` column to speed up filtering queries.
     ```sql
     CREATE INDEX idx_total_value ON aggregated_data(total_value);
@@ -43,13 +43,13 @@ To handle a larger volume of data and improve performance, consider the followin
     CREATE INDEX idx_timestamp ON aggregated_data(timestamp);
     ```
 
-- ** Data Compression: **
+- **Data Compression:**
   - Enable row-level compression to reduce table size and improve I/O performance.
     ```sql
     ALTER TABLE aggregated_data REBUILD WITH (DATA_COMPRESSION = ROW);
     ```
 
-- ** Table Partitioning (Optional): **
+- **Table Partitioning (Optional):**
   - Partition the table by date if it is expected to grow significantly.
     ```sql
     -- Example of partitioning by date
@@ -57,7 +57,7 @@ To handle a larger volume of data and improve performance, consider the followin
 
 ### Data Pipeline Optimization
 
-- ** Batch Processing: **
+- **Batch Processing:**
   - Process data in batches instead of row by row to reduce the number of database operations.
     ```python
     import pandas as pd
@@ -95,10 +95,10 @@ To handle a larger volume of data and improve performance, consider the followin
     conn.close()
     ```
 
-- ** Connection Management: **
+- **Connection Management:**
   - Keep the connection open during the entire data processing to avoid the overhead of repeatedly opening and closing connections.
 
-- ** Error Handling: **
+- **Error Handling:**
   - Implement robust error handling to log and manage errors during data ingestion.
 
 
@@ -106,15 +106,15 @@ To handle a larger volume of data and improve performance, consider the followin
 
 The `data_queries.py` file contains Python scripts for:
 
-- ** Aggregated Summary: ** Fetching the total and average of `total_value`.
-- ** Data Retrieval: ** Retrieving records where `total_value` is greater than 100.
+- **Aggregated Summary:**Fetching the total and average of `total_value`.
+- **Data Retrieval:**Retrieving records where `total_value` is greater than 100.
 
 ## Future Improvements
 
-- ** Scalability: ** Consider using Apache Spark for distributed processing of larger datasets. **
-- ** Data Validation: ** Add validation steps to ensure data integrity before ingestion. **
-- ** Real-time Streaming: ** Explore real-time streaming solutions like Apache Kafka for more accurate data **simulation. **
-- ** Monitoring: ** Implement logging and monitoring for pipeline performance and error tracking.
+- **Scalability:**Consider using Apache Spark for distributed processing of larger datasets. **
+- **Data Validation:**Add validation steps to ensure data integrity before ingestion. **
+- **Real-time Streaming:**Explore real-time streaming solutions like Apache Kafka for more accurate data **simulation. **
+- **Monitorinð:**Implement logging and monitoring for pipeline performance and error tracking.
 
 ## License
 
