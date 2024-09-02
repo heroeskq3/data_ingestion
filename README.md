@@ -26,7 +26,7 @@ python data_pipeline.py
 ```bash
 python data_queries.py
 ```
-##Optimization
+## Optimization
 
 ```markdown
 To handle a larger volume of data and improve performance, consider the following optimizations:
