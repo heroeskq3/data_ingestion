@@ -1,0 +1,36 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyd
+*.db
+
+# Environment
+venv/
+env/
+.venv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# System Files
+.DS_Store
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest
+.cache
+
+# Other
+*.egg
+*.egg-info
+dist/
+build/
