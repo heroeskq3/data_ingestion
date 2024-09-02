@@ -106,15 +106,15 @@ To handle a larger volume of data and improve performance, consider the followin
 
 The `data_queries.py` file contains Python scripts for:
 
-- **Aggregated Summary:**Fetching the total and average of `total_value`.
-- **Data Retrieval:**Retrieving records where `total_value` is greater than 100.
+- **Aggregated Summary:**Fetching the total and average of `total_value`.**
+- **Data Retrieval:**Retrieving records where `total_value` is greater than 100.**
 
 ## Future Improvements
 
-- **Scalability:**Consider using Apache Spark for distributed processing of larger datasets. **
-- **Data Validation:**Add validation steps to ensure data integrity before ingestion. **
-- **Real-time Streaming:**Explore real-time streaming solutions like Apache Kafka for more accurate data **simulation. **
-- **Monitorinð:**Implement logging and monitoring for pipeline performance and error tracking.
+- **Scalability:**Consider using Apache Spark for distributed processing of larger datasets.**
+- **Data Validation:**Add validation steps to ensure data integrity before ingestion.**
+- **Real-time Streaming:**Explore real-time streaming solutions like Apache Kafka for more accurate data **simulation.**
+- **Monitorinð:**Implement logging and monitoring for pipeline performance and error tracking.**
 
 ## License
 
