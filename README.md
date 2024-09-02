@@ -12,7 +12,7 @@ This repository contains a data ingestion pipeline that simulates real-time data
 1. ** Install Dependencies: **
    ```bash
    pip install pandas pyodbc
-   
+   ```
 
 2. ** Configure the Database Connection: **
 - Open data_pipeline.py and data_queries.py, and update the connection strings with your SQL Server credentials.
@@ -23,13 +23,14 @@ python data_pipeline.py
 ```
 
 4. ** Run the Queries Script: **
-- python data_queries.py
-
+```bash
+python data_queries.py
+```
 ##Optimization
 
 ```markdown
 To handle a larger volume of data and improve performance, consider the following optimizations:
-
+```
 ### Database Optimization
 
 - ** Indexes: **
